@@ -4,8 +4,8 @@
   "description": "example of textlint-rule-prh.",
   "main": "index.js",
   "scripts": {
-    "prh": "prh --rules rule.yaml README.md",
-    "prh:replace": "prh --replace --rules rule.yaml README.md",
+    "prh": "prh --rules prh.yml README.md",
+    "prh:replace": "prh --replace --rules prh.yml README.md",
     "textlint": "textlint README.md"
   },
   "keywords": [
