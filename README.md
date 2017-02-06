@@ -1,36 +1,47 @@
-# prhのサンプル
+# Example of prh
 
-サンプルプロジェクト
+See Also 
 
 - [vvakame/prh](https://github.com/vvakame/prh "vvakame/prh")
 - [azu/textlint-rule-prh](https://github.com/azu/textlint-rule-prh "azu/textlint-rule-prh")
 
-## 間違った単語のチェック
+## Check wrong word
 
-JQuery は jQuery が正しいはずだ。
+JQuery should be jQuery 
 
-## リンクの単語は無視される
+## Ignore word in link title
 
-[jquery.com](http://jquery.com/) というリンクの文字列は無視できる。 
+[jquery.com](http://jquery.com/) is ignored 
 
-## 確認方法
+## Usage
 
-### prh
 
-[vvakame/prh](https://github.com/vvakame/prh "vvakame/prh")
+### textlint + prh
 
-```
-npm run prh
-```
-
-(dry-runで変換された結果が表示されます)
-
-### textlint
+textlint + prh can check text as Markdown.
 
 [azu/textlint-rule-prh](https://github.com/azu/textlint-rule-prh "azu/textlint-rule-prh")
 
 ```
 npm run textlint
+
+> textlint README.md
+
+/Users/azu/.ghq/github.com/azu/prh-textlint-example/README.md
+  10:1  ✓ error  JQuery => jQuery  prh
+
+✖ 1 problem (1 error, 0 warnings)
+✓ 1 fixable problem.
+Try to run: $ textlint --fix [file]
 ```
 
-Lint結果が表示されます。
+
+### prh
+
+[vvakame/prh](https://github.com/vvakame/prh "vvakame/prh") check text as plain text.
+
+```
+npm run prh
+```
+
+dry-run results.
